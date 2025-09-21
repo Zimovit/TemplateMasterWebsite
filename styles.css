@@ -1,0 +1,373 @@
+:root {
+  --primary-color: #155eef;
+  --primary-hover: #1347c7;
+  --text-color: #000;
+  --text-secondary: #333;
+  --text-muted: #555;
+  --text-light: #666;
+  --bg-white: #fff;
+  --bg-light: #f5f5f5;
+  --bg-highlight: #f8fafe;
+  --border-light: #e0e0e0;
+  --border-highlight: #e1effe;
+  --font-inter: "Inter", sans-serif;
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 4px 8px rgba(21, 94, 239, 0.3);
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --transition-fast: 0.2s ease;
+  --border-radius: 6px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-white);
+  font-family: var(--font-inter);
+  color: var(--text-color);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  min-height: 80px;
+}
+
+.logo--header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+}
+
+.logo--title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.menu--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.inner--menu {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0;
+  flex-grow: 1;
+}
+
+.menu--item, .menu--item a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.menu--item:hover {
+  color: var(--text-muted);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: background-color var(--transition-fast);
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--bg-light);
+}
+
+.dropdown-menu a.active {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  font-weight: 600;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.download-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-button);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+.download-button svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+  flex-grow: 1;
+}
+
+.hero {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(26, 98, 224, 0.61) 0%, rgba(73, 117, 169, 0.07) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  margin: 0;
+  gap: 24px;
+}
+
+.hero--image--left, 
+.hero--image--right {
+  width: 120px;
+  height: 120px;
+}
+
+.hero--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero--title {
+  font-size: clamp(28px, 5vw, 48px);
+  text-shadow: var(--text-shadow);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero--description {
+  font-size: clamp(16px, 2.5vw, 24px);
+  max-width: 500px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.about--text {
+  font-size: clamp(16px, 2.5vw, 20px);
+  max-width: 960px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 16px 0;
+}
+
+.screenshot {
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.screenshot--image {
+  border-radius: var(--border-radius-xl);
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  background: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: auto;
+  max-width: 960px;
+  padding: 24px 16px;
+}
+
+.footer--line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer--text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.footer--link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer--link:hover {
+  color: var(--primary-hover);
+}
+
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  header {
+    padding: 8px 24px;
+  }
+
+  .logo--header {
+    padding: 12px 24px;
+  }
+
+  .menu--header {
+    padding: 0 24px;
+  }
+
+  main {
+    padding: 0 24px;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 40px;
+    margin: 0 40px;
+    gap: 32px;
+  }
+
+  .hero--image--left, 
+  .hero--image--right {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer--line {
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .hero {
+    margin: 0 80px;
+  }
+
+  .hero--image--left, 
+  .hero--image--right {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

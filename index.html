@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/i18n.js" defer></script>
+    <script src="js/github-api.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo logo--header">
+            <img src="images/logo _ icon.png" alt="Template Master Logo">
+            <h1 class="logo--title">Template Master</h1>
+        </div>
+        <nav class="menu menu--header">
+            <div class="inner--menu">
+                <!-- Dropdown for language -->
+                <div class="menu--item dropdown">
+                    <a href="#language"> <span class="globe-icon">🌐</span> <span data-i18n="menu.language">Language</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?lang=en" data-lang="en">English</a></li>
+                        <li><a href="?lang=ru" data-lang="ru">Русский</a></li>
+                        <li><a href="?lang=it" data-lang="it">Italiano</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <a href="mailto:sergei29.dev@proton.me?subject=TemplateMaster" title="sergei29.dev@proton.me" class="menu--item contact" data-i18n="menu.contact">Contact me</a>
+            </div>
+            <button class="download-button">
+                <span data-i18n="menu.download">Download</span>
+                <img src="images/download-arrow.svg" alt="Download Arrow">
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero--image--left">
+                <img src="images/chilling-person.svg" alt="chilling">
+            </div>
+            <div class="hero--content">
+                <h2 class="hero--title" data-i18n="hero.title">Fast. Easy. Free</h2>
+                <p class="hero--description" data-i18n="hero.description">
+                    Create hundreds of standard documents with a few keystrokes. Let machines do the routine work for you.
+                </p>
+                <button class="download-button hero--download">
+                    <span data-i18n="hero.download">Download</span>
+                    <img src="images/download-arrow.svg" alt="Download Arrow">
+                </button>
+            </div>
+            <div class="hero--image--right">
+                <img src="images/working-computer.svg" alt="working">
+            </div>
+        </section>
+        <section class="about">
+            <h2 class="about--header" data-i18n="about.header">About Template Master</h2>
+
+            <p class="about--text" data-i18n="about.1st">Imagine that you need to type the text for dozens of greeting cards, changing only the names and addresses. Or maybe you are sending out wedding invitations? Or you need to send a multi-page legal document to hundreds of recipients, making dozens of edits in each copy. Boring routine work. This is exactly what machines are for.</p>
+            
+            <p class="about--text" data-i18n="about.2nd">With the Template Master application, you only need a document template and a spreadsheet with data for replacements. You can read how to create a template in the instructions by clicking the corresponding button in the program. The program can generate the header for the spreadsheet itself, you will only have to enter the data.</p>
+            
+            <p class="about--text" data-i18n="about.3rd">If you need to generate one document, and you have a template, the program can do this too. Currently, Template Master can work with DOCX and ODT documents, as well as XLSX and ODS spreadsheets. And, it is also a completely free application.</p>
+        </section>
+        <section class="screenshot">
+            <img src="images/screenshots/screenshot-main-en.png" alt="Template Master interface" class="screenshot--image" 
+            data-i18n-src="screenshots.main_image" data-i18n-alt="screenshots.main">
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer--line footer--version--license">
+            <span class="footer--text app--name">Template Master</span>
+            <span class="footer--text app--version">v 1.0.0</span>
+            <span class="footer--text app--year">2025</span>
+            <a href="https://opensource.org/licenses/MIT" class="footer--text app--license footer--link"
+                target="_blank" rel="noopener">MIT License</a>
+        </div>
+        <div class="footer--line footer--counter--contact">
+            <span class="footer--text footer--counter">Downloads: ---</span>
+            <a href="https://github.com/Zimovit/TemplateMaster" class="footer--text footer--link footer--github" 
+                target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:sergei29.dev@proton.me?subject=TemplateMaster" title="sergei29.dev@proton.me" class="footer--text footer--link contact footer--feedback">Feedback</a>
+            <a href="#" class="footer--text footer--link footer--privacy" target="_blank"
+                data-i18n="footer.privacy_text" data-i18n-href="footer.privacy_link">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

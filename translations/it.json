@@ -1,0 +1,31 @@
+{
+  "menu": {
+    "language": "Lingua",
+    "contact": "Contattami",
+    "download": "Scarica"
+  },
+  "hero": {
+    "title": "Veloce. Facile. Gratuito",
+    "description": "Crea centinaia di documenti standard con pochi tasti. Lascia che le macchine facciano il lavoro di routine per te.",
+    "download": "Scarica"
+  },
+  "about": {
+    "header": "Informazioni su Template Master",
+    "1st": "Immagina di dover digitare il testo per decine di biglietti di auguri, cambiando solo nomi e indirizzi. O forse stai inviando inviti di matrimonio? O devi inviare un documento legale di più pagine a centinaia di destinatari, apportando decine di modifiche in ogni copia. Lavoro di routine noioso. È proprio per questo tipo di lavoro che servono le macchine.",
+    "2nd": "Con l'applicazione Template Master, hai bisogno solo di un modello di documento e un foglio di calcolo con i dati per le sostituzioni. Puoi leggere come creare un modello nelle istruzioni cliccando il pulsante corrispondente nel programma. Il programma può generare autonomamente l'intestazione del foglio di calcolo, dovrai solo inserire i dati.",
+    "3rd": "Se devi generare un documento e hai un modello, il programma può farlo anche questo. Attualmente, Template Master può lavorare con documenti DOCX e ODT, così come fogli di calcolo XLSX e ODS. Ed è anche un'applicazione completamente gratuita."
+  },
+  "screenshots": {
+    "header": "Guarda Template Master in azione",
+    "main": "Interfaccia principale - semplice e intuitiva",
+    "main_image": "images/screenshots/screenshot-main-it.png"
+  },
+  "footer": {
+    "privacy_text": "Privacy",
+    "privacy_link": "privacy-it.html"
+  },
+  "feedback": {
+    "fallback_question": "Client email non configurato? Copiare email (sergei29.dev@proton.me) negli appunti?",
+    "copied_message": "Email copiata: sergei29.dev@proton.me"
+  }
+}
